@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+    <title>Number guessing game</title>
+
+    <style>
+      html {
+        font-family: 'montserrat';
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+        background: fixed grey;
+        text-align: center;
+      }
+      .division {
+        position: relative;
+        background-color: antiquewhite;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: 10px;
+      }
+      .form input[type="number"] {
+        width: 200px;
+        height: 27px;
+        margin-right: 0;
+        font-size: 1rem;
+        font-weight: bolder;
+      }
+
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+
+      .guessSubmit{
+        padding: 9px;
+        font-size: .9rem;
+        font-weight: bold;
+        background-color: lightgreen;
+        border: 2px grey;
+        border-radius: 0 10px 10px 0;
+        margin-left: 0;
+        transition: 4s ease color;
+      }
+
+      .guessSubmit:hover {
+        background: grey;
+        color: #fff;
+        border: 4px lightgreen;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="division">
+      <h1>Number guessing game</h1>
+
+      <p>We have selected a random number between 1 and 10. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+
+      <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <input type="number" min="1" max="10" required id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit">
+      </div>
+
+      <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+      </div>
+    
+
+    <script src='index.js'></script>
+  </div>  
+  </body>
+</html>
